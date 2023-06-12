@@ -1,18 +1,12 @@
 import './App.css';
+import { Paths } from './Components/Routes';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header bg-black bg-blend-darken">
-        <h1 className='text-4xl text-slate-300 animate-pulse'> React Template Repository with the following packages Pre-installed :</h1>      
-        <ol className='pt-5'>
-           <li>React Router (v5) </li>
-           <li>Tailwind CSS </li>
-            <li> Configuration to use a proxy server.</li>
-            <li>React start script modified to use openssl legacy provider.</li>
-        </ol>
-      
-      </header>
+    <div 
+      className="App font-text text-2xl min-h-screen min-w-screen justify-center items-center
+      bg-gradient-to-bl from-slate-300 via-gray-400 to-gray-500 flex flex-col text-amber-800">
+      <Paths />
     </div>
   );
 }
