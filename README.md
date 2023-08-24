@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# React Project With Tailwind CSS Template
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+This is meant to be used as a React Project Template, bootstraped using [Create React App](create-react-app.dev), and using [Tailwind CSS](tailwindcss.com) as the styling library
 
-In the project directory, you can run:
 
-### `npm start`
+## Installed Dependencies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The project also includes other dependencies that are commonly used in React Applications.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+These include:
 
-### `npm test`
+[React Router](https://reactrouter.com) ~> Declarative Client side Routing For React Applications.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Framer Motion](framer.com.motion) ~> Animation library compatible with React.
 
-### `npm run build`
+[@tailwindcss/forms](tailwindcss-forms.vercel.app) ~> A Tailwind CSS plugin that applies some default styling to form Components.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Folder Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+As is, React does not enforce any folder structure, whatever works for you, right? It has been said repeatedly that this causes confusion while working on teams, so to train some discipline into myself, I have implemented the **Directory per View** folder structure described in this **[Post](https://survivejs.com/react/advanced-techniques/structuring-react-projects/).**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+It implements a sort of [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) style while approaching react projects.
 
-### `npm run eject`
+It basically breaks down to this :
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+	/src
+	|----/Actions (contains connectors of your application to outside resources (APIS, AXIOS) and the like)
+	|	|--LoginAction.js
+	|	|--SignupAction.js
+	|----/Components (contains UI logic of the application)
+	|	|---/App
+	|	|	|--App.jsx /tsx
+	|	|	|--App.css (if any)
+	|	|---/About
+	|	|	|--About.jsx
+	|	|	|--About.css
+	|----/Contexts (contains the state which has to be shared across components)
+	|	|---/pageContext
+	|	|	|--index.js (Exports consumers providers....)
+	|	|	|--Context1.js (Contains part of the state)
+	|	|	|--Context2.js
+	|----/Stores
+	|	|---AuthenticateStore.js
+	|	|---ActionStore.js
+	|----/Views / Pages (contains the different routes / views in the applications)
+	| |---/Homepage
+	| | |--Home.jsx
+	|	|	|--Home.css
+	|----/Assets (static assets, images etc)
+	| | |---/Images
+	| | | |--hello.png
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Install dependencies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+	npm i (npm i --legacy-peer-deps) : if there are any
 
-## Learn More
+## Run Application
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+	npm run start / npm start
