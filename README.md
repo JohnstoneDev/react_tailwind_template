@@ -17,6 +17,8 @@ These include:
 
 [@tailwindcss/forms](tailwindcss-forms.vercel.app) ~> A Tailwind CSS plugin that applies some default styling to form Components.
 
+[Ionicons](https://ionic.io/ionicons) ~> Open Source Icons
+
 ## Folder Structure
 
 As is, React does not enforce any folder structure, whatever works for you, right? It has been said repeatedly that this causes confusion while working on teams, so to train some discipline into myself, I have implemented the **Directory per View** folder structure described in this **[Post](https://survivejs.com/react/advanced-techniques/structuring-react-projects/).**
