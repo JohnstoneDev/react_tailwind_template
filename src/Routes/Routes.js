@@ -1,29 +1,15 @@
 import { Routes, Route } from 'react-router-dom'
-import { AnimatePresence, motion } from 'framer-motion'
 
-function HomeComponent(){
-	return (
-		<motion.div>
-			<AnimatePresence>
-				<h1 
-					className='text-4xl text-zinc-300 animate-pulse font-headings'> React Template Repository with the following packages Pre-installed :</h1>
-					<ol className='pt-5'>
-						<li>React Router</li>
-						<li>Tailwind CSS </li>
-						<li> Configuration to use a proxy server.</li>
-					</ol>
-			</AnimatePresence>
-		</motion.div>
-	)
-}
+// Local imports should come last
+import { Home } from '../Pages/Home/Home'
 
 
 export const Paths = () => {
 	return (
-		<motion.div>
+		<div>
 			<Routes>
-				<Route exact path='/' element={<HomeComponent />}/>
+				<Route exact path='/' element={<Home />}/>
 			</Routes>
-		</motion.div>
+		</div>
 	)
 }
