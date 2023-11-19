@@ -7,25 +7,19 @@ module.exports = {
       global : ['Inter', 'sans-serif'],
     },
     fontSize : {
-      'heading' : ['36px', {
+      'heading' : ['30px', {
           lineHeight : '40px',
           letterSpacing : '0px',
-          fontWeight : '800',
+          fontWeight : '700',
         }
       ],
-    'section' : ['24px', {
+    'section' : ['20px', {
         lineHeight : '32px',
-        letterSpacing : '0px',
-        fontWeight : '600',
-      }
-     ],
-   'button' : ['20px', {
-        lineHeight : '28px',
         letterSpacing : '0px',
         fontWeight : '500',
       }
-    ],
-    'regular' : ['18px', {
+     ],
+    'regular' : ['15px', {
         lineHeight : '28px',
         letterSpacing : '0px',
         fontWeight : '400',
